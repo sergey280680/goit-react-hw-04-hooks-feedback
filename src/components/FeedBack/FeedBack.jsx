@@ -17,22 +17,42 @@ export function FeedBack({ title, titleStatistic, titleNoStatistic }) {
   const onLeaveFeedBack = (option) => {
     switch (option) {
       case "good":
-        setGood(good + 1);
+        setGood((state) => state + 1);
         break;
 
       case "neutral":
-        setNeutral(neutral + 1);
+        setNeutral((state) => state + 1);
         break;
 
       case "bad":
-        setBad(bad + 1);
+        setBad((state) => state + 1);
         break;
 
       default:
         return;
     }
-    setTotal(total + 1);
+    setTotal((state) => state + 1);
   };
+
+  //  const onLeaveFeedBack = (option) => {
+  //   switch (option) {
+  //     case "good":
+  //       setGood(good + 1);
+  //       break;
+
+  //     case "neutral":
+  //       setNeutral(neutral + 1);
+  //       break;
+
+  //     case "bad":
+  //       setBad(bad + 1);
+  //       break;
+
+  //     default:
+  //       return;
+  //   }
+  //   setTotal(total + 1);
+  // };
 
   return (
     <>
